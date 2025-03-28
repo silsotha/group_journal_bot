@@ -9,14 +9,10 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemo
 from dotenv import load_dotenv
 import os
 
-# загрузка переменных из .env
 load_dotenv()
-
-# токен
 API_TOKEN = os.getenv("BOT_TOKEN")
-if not API_TOKEN:
-    raise ValueError("Токен бота не найден в .env файле. Убедитесь, что BOT_TOKEN задан.")
 
+# инициализация бота и диспетчера
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher()
 
